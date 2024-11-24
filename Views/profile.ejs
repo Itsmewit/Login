@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile</title>
+</head>
+<body>
+  <h1>Welcome, <%= user.username %>!</h1>
+  <form action="/edit-profile" method="POST">
+    <label>Username:</label>
+    <input type="text" name="username" value="<%= user.username %>" required />
+    <label>Email:</label>
+    <input type="email" name="email" value="<%= user.email %>" required />
+    <button type="submit">Update Profile</button>
+  </form>
+  <form action="/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+</body>
+</html>
